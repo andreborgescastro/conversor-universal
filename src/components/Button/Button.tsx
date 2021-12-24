@@ -6,18 +6,18 @@ import useButton from "./hooks/useButton";
 
 const Button: React.FC<IButtonProps> = (props) => {
 
-    const { handleClick, buttonCustom } = useButton(props);
+    const { handleClick, buttonHook } = useButton(props);
 
     return (
 
         <Container
-            backgroundColor={buttonCustom.backgroundColor}
-            hoverColor={buttonCustom.hoverColor}
+            backgroundColor={buttonHook.backgroundColor}
+            hoverColor={buttonHook.hoverColor}
             onClick={handleClick}
-            label={buttonCustom.label}
+            label={buttonHook.label}
         >
-            {buttonCustom.icon}
-            {buttonCustom.label}
+            {buttonHook.icon}
+            {buttonHook.label}
         </Container>
 
     );

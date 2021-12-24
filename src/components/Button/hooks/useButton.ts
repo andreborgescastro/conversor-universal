@@ -19,14 +19,14 @@ const useButton = (props: IButtonProps) => {
 
 
     // # export methods
-    const buttonCustom = {
+    const buttonHook = {
         backgroundColor : backgroundColor, 
         hoverColor : hoverColor, 
         label : label,
         icon : icon,
     };
 
-    return { buttonCustom, handleClick };
+    return { buttonHook, handleClick };
     // # end
 
 };

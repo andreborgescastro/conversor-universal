@@ -3,11 +3,11 @@ import { IButtonProps } from "./button.types";
 
 
 export const Container = styled.button<IButtonProps>`
-    width: 200px;
-    height: 50px;
+    width: 96px;
+    height: 32px;
     background-color: ${(props) => props.backgroundColor};
     border-style: none;
-    border-radius: 10px;
+    border-radius: 4px;
     color: #fff;
 
     &:hover {
