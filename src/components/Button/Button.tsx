@@ -1,41 +1,26 @@
-import React from "react";
+import React, { Children } from "react";
 
-import { Container, Icon } from "./button.styles";
+import { Container } from "./button.styles";
 import { IButtonProps } from "./button.types";
 import useButton from "./hooks/useButton";
 
-const BoilerPlateComponent: React.FC<IButtonProps> = (props) => {
-  // # lets and consts
-  const { handleClick, buttonCustom } = useButton(props);
-  // # end
+const Button: React.FC<IButtonProps> = (props) => {
 
-  // # useEffects
-  // # end
+    const { handleClick, buttonCustom } = useButton(props);
 
-  // # methods
-  // # end
+    return (
 
-  // # render methods
-  // # end
+        <Container
+            backgroundColor={buttonCustom.backgroundColor}
+            hoverColor={buttonCustom.hoverColor}
+            onClick={handleClick}
+            label={buttonCustom.label}
+        >
+            {buttonCustom.icon}
+            {buttonCustom.label}
+        </Container>
 
-  return (
-    <Container
-      backgroundColor={buttonCustom.button.backgroundColor}
-      hoverColor={buttonCustom.button.hoverColor}
-      onClick={() => handleClick}
-      iconColor="tste"
-      iconColorHover="teste"
-      label={buttonCustom.button.label}
-    >
-      <Icon
-        iconName={"teste"}
-        iconColor={buttonCustom.icon.iconColor}
-        iconColorHover={buttonCustom.icon.iconColorHover}
-      />
-
-      {buttonCustom.button.label}
-    </Container>
-  );
+    );
 };
 
-export default BoilerPlateComponent;
+export default Button;

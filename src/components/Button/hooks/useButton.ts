@@ -1,35 +1,29 @@
-import { useState } from "react";
-
 import { IButtonProps } from "../button.types";
 
 const useButton = (props: IButtonProps) => {
 
-    // # lets and consts
-
-    const { button, icon, onClick } = props;
+    // # start lets and consts
+    const { backgroundColor, hoverColor, label, onClick, icon } = props;
     const message = 'Botão clicado';
-
     // # end
 
     // # useEffects
     // # end
 
     // # methods
-
     const handleClick = () => {
-        alert(message)
+        onClick();
+        console.log(message);
     };
-
-    // # end
-
-    // # render methods
     // # end
 
 
     // # export methods
     const buttonCustom = {
-        icon: icon,
-        button: button,
+        backgroundColor : backgroundColor, 
+        hoverColor : hoverColor, 
+        label : label,
+        icon : icon,
     };
 
     return { buttonCustom, handleClick };

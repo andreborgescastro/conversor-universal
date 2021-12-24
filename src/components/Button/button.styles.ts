@@ -1,8 +1,8 @@
 import styled from "styled-components";
+import { IButtonProps } from "./button.types";
 
-import { IButtonPropsStyles, IIconPropsStyles } from "./button.types";
 
-export const Container = styled.button<IButtonPropsStyles>`
+export const Container = styled.button<IButtonProps>`
     width: 200px;
     height: 50px;
     background-color: ${(props) => props.backgroundColor};
@@ -13,18 +13,5 @@ export const Container = styled.button<IButtonPropsStyles>`
     &:hover {
         background-color: ${(props) => props.hoverColor};
     }
-`;
-
-export const Icon = styled.i<IIconPropsStyles>`
-    color: ${(props) => props.iconColor};
-
-    &:hover {
-        color: ${(props) => props.iconColorHover};
-    }
-`;
-
-
-
-
-
+    `;
 

@@ -1,23 +1,19 @@
+import { ReactChildren } from "react";
+import { JsxChild, JsxElement } from "typescript";
+
 export interface IButtonProps {
     /* Props */
-    button: IButtonPropsStyles;
-    icon: IIconPropsStyles;
+    label: string;
+    backgroundColor: string;
+    hoverColor: string;
+    // icon: React.ReactNode;
+    icon?: JSX.Element;
 
     /* Function Props */
     onClick: Function;
 }
 
-export interface IButtonPropsStyles {
-    label: string;
-    backgroundColor: string;
-    hoverColor: string;
-    iconColor: string;
-    iconColorHover: string;
-}
 
-export interface IIconPropsStyles {
-    iconName: string;
-    iconColor: string;
-    iconColorHover: string;
-}
+
+
 
